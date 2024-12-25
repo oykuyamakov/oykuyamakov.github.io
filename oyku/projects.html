@@ -4,86 +4,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>oyku yamak</title> <!-- Name of the browser tab -->
+    <title>Oyku Yamak</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400..900&display=swap" rel="stylesheet"> <!-- Updated font to Lora -->
-    <link rel="stylesheet" href="css/styles.css"> <!-- Link to the external stylesheet -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
     <div class="container">
-        <header style="margin-bottom: 20px;"> <!-- Added margin to create space -->
+        <header>
             <div class="up-bar">
-                <h1>oyku yamak</h1> <!-- Header -->
-                <h2>Multidisciplinary Designer - Programmer </h2>
+                <h1>Oyku Yamak</h1>
+                <h2>Multidisciplinary Designer - Programmer</h2>
             </div>
         </header>
 
         <main>
+
             <div class="left-bar">
                 <nav>
                     <ul>
                         <li><a href="index.html">About</a></li>
-                        <li><a href="games.html">Games</a></li>
                         <li><a href="projects.html">Projects</a></li>
                     </ul>
                 </nav>
             </div>
+            <div class="content">
+                <!-- Section: Acid Lazuri -->
+                <ul class="body-info project-list">
+                    <li>
+                        <h1>Acid Lazuri</h1>
+                        <p>
+                            Gurbet - an audio-visual performance by Acid Lazuri showcased at Jay Street ITP.
+                            Created with Unity, blending captivating visuals and soundscapes.
+                        </p>
+                        <iframe class="scaled-video" width="560" height="315" src="https://www.youtube.com/embed/eoavRUAIT40" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-            <div class="right-bar">
-                <div class="content">
-                    <ul class="body-info">
-                        <li>
-                            <h1> 
-                                projects
-                            </h1>
-                        </li>
-                    
-                        <li>
-                            <img class="scaled-image-border-large" src="images/aboutphoto.png" alt="Oyku Yamakoglu">
-                        </li>
+                    </li>
 
-                        <p> oykuyamak@gmail.com</p>
+                    <!-- Section: Aalto University - Echoes of Water Seminar -->
+                    <li>
+                        <h1>Aalto University - Embodied Water Seminar</h1>
+                        <p>
+                            <strong>The Cycle</strong> - An immersive experience connecting diverse media to explore the story of human nature and water cycles.
+                            Installation Created with TouchDesigner and Azure Kinect by Oyku and Ziyu. 
+                        </p>
+                        <p> 
+                            The film shot by Saranya, Ziga, Oyku, and Ziyu.
+                        </p>
+                        <iframe class="scaled-video" width="560" height="315" src="https://www.youtube.com/embed/b-Y0i8tzR04" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <video class="scaled-video" controls>
+                            <source src="videos/aalto1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <video class="scaled-video" controls>
+                            <source src="videos/aalto2.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <img class="scaled-image-border-large" src="videos/altoInfo.png" alt="The Cycle - Photo 1">
+                        <img class="scaled-image-border-large" src="videos/ziyu.jpg" alt="The Cycle - Photo 2">
+                    </li>
 
-                    </ul>
-
-                    <!-- Acid Lazuri Video Section -->
-                    <div class="content-section">
-                        <h1>Acid Lazuri - Alter Ego Audio-Visual Performance at Jay Street ITP Showcase</h1>
-                        <p>Description: Gurbet audio-visual performance by Acid Lazuri done with Unity.</p>
-                        <!-- Updated YouTube video link -->
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/eoavRUAIT40" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-
-                    <!-- Aalto University Echoes of Water Seminar Section -->
-                    <div class="content-section">
-                        <h1>Aalto University Echoes of Water Seminar</h1>
-                        <p>The Cycle - an immersive experience which connects different media together to tell the story of human nature and water cycles, done with TouchDesigner using Azure Kinect, movie shot by Saranya, Ziga, Oyku, Ziyu. Experience done by Oyku and Ziyu.</p>
-                        <!-- Updated Thesis Presentation Video -->
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/eoavRUAIT40" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <!-- Temporary images (to be replaced later) -->
-                        <img src="images/temp-image1.jpg" alt="Image 1" class="scaled-image">
-                        <img src="images/temp-image2.jpg" alt="Image 2" class="scaled-image">
-                    </div>
-
-                    <!-- Itch.io Games and Projects Section -->
-                    <div class="content-section">
+                    <!-- Section: Itch.io Games and Projects -->
+                    <li>
                         <h1>Itch.io Games and Projects</h1>
-                        <p>Visit my Itch.io page: <a href="https://oykuyamako.itch.io/" target="_blank">oykuyamako.itch.io</a></p>
-                        <p>Also, check out my screensaver project: <a href="https://oykuyamako.itch.io/glu-glu-screen-saver" target="_blank">Glu Glu Screen Saver</a></p>
-                    </div>
+                        <p>
+                            Check out my games and other projects on
+                            <a href="https://oykuyamako.itch.io/" target="_blank">Itch.io</a>.
+                        </p>
+                        <p>
+                    
+                            <a href="https://oykuyamako.itch.io/glu-glu-screen-saver" target="_blank">
+                                Glu Glu Screensaver
+                            </a>.
+                        </p>
+                        <p>
+                    
+                            <a href="https://oykuyamako.itch.io/trip" target="_blank">
+                                A *Trip* simulation
+                            </a>.
+                        </p>
+                    </li>
 
-                    <!-- Random Work Section -->
-                    <div class="content-section">
+                    <li>
+                        <h1>Cultural Games Talk</h1>
+                        <p>Game Center Thesis Presentation</p>
+
+                        <iframe class="scaled-video" width="560" height="315" src="https://www.youtube.com/embed/EEg2iI9TGnw?start=8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+                        
+                    </li>
+
+                    <!-- Section: Random Work -->
+                    <li>
                         <h1>Random Work</h1>
-                        <p>Watch the "Mosh in Unity" video:</p>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/eoavRUAIT40" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <p>Watch the "Draft Music Video" video:</p>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/eoavRUAIT40" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
+                        <p>Mosh in Unity</p>
+                        <video class="scaled-video" controls>
+                            <source src="videos/mosh.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p>Draft Music Video</p>
+                        <video class="scaled-video" controls>
+                            <source src="videos/high.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </li>
 
-                </div>
+                    <!-- Contact -->
+                    <li>
+                        <p>oykuyamak@gmail.com</p>
+                    </li>
+                </ul>
             </div>
         </main>
     </div>
