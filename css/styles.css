@@ -1,0 +1,184 @@
+body {
+    background: black;
+    margin: 0;
+    font-family: "Lora", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Tum sayfa */
+.container {
+    margin: 2em;
+}
+
+/* Header */
+.up-bar {
+    color: white;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 1.5em;
+
+    h1 {
+        margin-bottom: 5px;
+    }
+    
+    /* Isim alti info */
+    h2 {
+        font-weight: normal;
+        font-size: smaller;
+        margin-top: 0;
+    }
+}
+
+
+
+/* Sidebar left */
+.left-bar {
+    color: white;
+    font-weight: bold;
+    position: fixed;
+   
+    margin-left: 0; /* Closer to the left */
+    padding-left: 0; /* Remove extra padding */
+
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin-top: 2em;
+        margin-left: 0;
+    
+        li {
+            margin-bottom: 10px; /* Reduced spacing between items */
+        }
+    }
+    
+    a {
+        color: grey;
+        text-decoration: none;
+        font-weight: bold;
+    }
+}
+
+
+/* Bura biraz kafa karistirici. right bardaki vertical her seyin arasi bosluk. paragarf ve resim;er de ... */
+.content p {
+    margin-bottom: 2em; /* Adds two lines of spacing between paragraphs */
+}
+
+
+
+
+
+.body-info {
+    display: flex;
+    color: white;
+    font-size: 1em;
+    font-weight: lighter;
+    margin-left: 5em;
+    list-style: none;
+    flex-direction: row;
+
+    li {
+        margin: 1em;
+    }
+
+    .scaled-image {
+        height: 500px; /* Reduced image size */
+        margin-top: 5em;
+        
+    }
+    
+    .scaled-image-border-large {
+        max-width: 95%; /* Increased image size */
+        height: auto;
+    }
+
+    h1{
+        font-size: 2em;
+    }
+}
+
+
+
+/* Right bar content sections */
+.content-section {
+    display: none; /* Initially hide all sections */
+    margin-bottom: 2em; /* Space between sections */
+}
+
+.content-section h1 {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+/* To show the active section */
+.content-section.active {
+    display: block; /* Only the active section will be visible */
+}
+
+
+/* Installations icin Grid Style */
+#installations .grid-container {
+    display:block;
+    grid-template-columns: repeat(5, 1fr); /* 3 sütunlu bir grid */
+    gap: 2em; /* Hücreler arasındaki boşluk */
+    margin-top: 2em;
+}
+
+#installations .grid-item {
+    width: 500%;
+    height: 450px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px; /* Kenarları yuvarlatılmış */
+}
+
+
+/* projects.css */
+.project-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.project-list li {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 40px;
+}
+
+.project-list .scaled-video {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 10px;
+}
+
+.project-list .scaled-image-border-large {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin-top: 10px;
+}
+
+.project-list h1 {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.project-list p {
+    font-size: 1em;
+    color: white;
+    margin-bottom: 1em;
+}
+
+.project-list a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.project-list a:hover {
+    text-decoration: underline;
+}
