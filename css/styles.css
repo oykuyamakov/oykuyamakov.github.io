@@ -76,7 +76,7 @@ body {
     color: white;
     font-size: 1em;
     font-weight: lighter;
-    margin-left: 5em;
+    margin-left: 8em;
     list-style: none;
     flex-direction: row;
 
@@ -87,12 +87,14 @@ body {
     .scaled-image {
         height: 500px; /* Reduced image size */
         margin-top: 5em;
+        align-self:flex-end;
         
     }
     
     .scaled-image-border-large {
-        max-width: 95%; /* Increased image size */
+        max-width: 55%; /* Increased image size */
         height: auto;
+        margin-left: 8em;
     }
 
     h1{
@@ -156,11 +158,21 @@ body {
     margin-top: 10px;
 }
 
-.project-list .scaled-image-border-large {
-    width: 100%;
-    max-width: 800px;
-    height: auto;
+.project-list .scaled-video-half-size {
+    width: 40%; 
+    height: 40%;
+    display: inline-block;
+    margin-right: 10px; 
+    margin-left: 40px;
     margin-top: 10px;
+}
+
+.project-list .scaled-image-border-large {
+    width: 60%;
+    max-width: 600px;
+    max-height: 600px;
+    margin-top: 10px;
+    align-self: center;
 }
 
 .project-list h1 {
