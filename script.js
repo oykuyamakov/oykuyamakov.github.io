@@ -1,47 +1,42 @@
-// JavaScript for changing content
-function changeContent(pageId) {
-    // Hide all content sections
-    const pages = document.querySelectorAll('.content-section');
-    pages.forEach(page => {
-        page.classList.remove('active'); // Remove active class (hides the section)
-    });
 
-    // Show the selected content section
-    const selectedPage = document.getElementById(pageId);
-    if (selectedPage) {
-        selectedPage.classList.add('active'); // Add active class (shows the section)
+
+// Create the particles container and append it to the body
+const particlesContainer = document.createElement('div');
+particlesContainer.classList.add('scrollbar-particles');
+document.body.appendChild(particlesContainer);
+
+let particleCount = 20;  // Number of particles per mouse move
+
+// Function to create particles
+function createParticles(e) {
+    const particle = document.createElement('div');
+    particle.classList.add('particle');
+
+    // Randomize particle movement in X and Y directions
+    const randomX = (Math.random() - 0.5) * 2050;
+    const randomY = (Math.random() - 0.5) * 5000;
+
+    // Position the particle where the mouse is
+    particle.style.left = `${e.clientX}px`;
+    particle.style.top = `${e.clientY}px`;
+
+    // Set the random movement using custom properties
+    particle.style.setProperty('--x', `${randomX}px`);
+    particle.style.setProperty('--y', `${randomY}px`);
+
+    // Add the particle to the container
+    particlesContainer.appendChild(particle);
+
+    // Remove the particle after animation ends
+    setTimeout(() => {
+        particle.remove();
+    }, 1500);  // Increase the time for the particle visibility duration
+}
+
+// Event listener for mouse movement on the entire document
+document.body.addEventListener('click', function(e) {
+    for (let i = 0; i < particleCount; i++) {
+        createParticles(e);
     }
-}
+});
 
-// Optional: Set default page to be shown when the page loads
-window.onload = function() {
-    changeContent('about'); // Default page is About
-};
-
-
-
-//degisen resimler installations icin
-
-
-// JavaScript for changing images in the installations grid
-function changeInstallationsImages() {
-    const images = [
-        'images/image1.jpg',
-        'images/image2.jpg',
-        'images/image3.jpg',
-        'images/image4.jpg',
-        'images/image5.jpg',
-        'images/image6.jpg'
-    ];
-
-    const gridItems = document.querySelectorAll('#installations .grid-item');
-
-    gridItems.forEach(item => {
-        // Select a random image from the images array
-        const randomImage = images[Math.floor(Math.random() * images.length)];
-        item.style.backgroundImage = `url(${randomImage})`; // Update the image
-    });
-}
-
-// Optional: Set interval to change the images every 3 seconds
-setInterval(changeInstallationsImages, 8000); // Change images every 3 seconds

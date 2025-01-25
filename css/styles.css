@@ -9,7 +9,7 @@ body {
 
 /* Tum sayfa */
 .container {
-    margin: 2em;
+    margin: 3em;
 }
 
 /* Header */
@@ -54,6 +54,8 @@ body {
     color: white;
     font-weight: bold;
     position: fixed;
+    font-size: 1.5em;
+
    
     margin-left: 0; /* Closer to the left */
     padding-left: 0; /* Remove extra padding */
@@ -71,20 +73,54 @@ body {
     }
     
     a {
-        color: grey;
+        color: rgb(69, 11, 123);
         text-decoration: none;
         font-weight: bold;
+        
+    }
+
+    a:hover {
+        color: purple;
+    }
+
+    a:focus{
+        color: turquoise;
+
+    }
+    
+    
+}
+
+
+
+
+/* body on all pages */
+.content{
+    font-size: 1.1em;
+}
+
+
+.content-aboutpage{
+
+    font-size: 1.2em;
+    p{
+        margin-bottom: 2em; /* Adds two lines of spacing between paragraphs */
+
+        
+       
+    }
+
+    p span.heart {
+        color: pink;
+        font-size: 1.5em; /* Adjust the size of the hearts if necessary */
+    }
+
+    .aboutpage-body{
+        margin-left: 10em;
+
+      
     }
 }
-
-
-/* Bura biraz kafa karistirici. right bardaki vertical her seyin arasi bosluk. paragarf ve resim;er de ... */
-.content p {
-    margin-bottom: 2em; /* Adds two lines of spacing between paragraphs */
-}
-
-
-
 
 
 .body-info {
@@ -92,66 +128,42 @@ body {
     color: white;
     font-size: 1em;
     font-weight: lighter;
-    margin-left: 15em;
     list-style: none;
     flex-direction: row;
 
     li {
         margin: 1em;
     }
-
-    .scaled-image {
-        height: 500px; /* Reduced image size */
-        margin-top: 5em;
-        align-self:flex-end;
-        
-    }
     
     .scaled-image-border-large {
-        max-width: 55%; /* Increased image size */
+        max-width: 85%; /* Increased image size */
         height: auto;
         margin-left: 8em;
+        margin-bottom: 5em;
     }
 
-    h1{
-        font-size: 2em;
+
+
+    .scaled-image-header{
+
+        max-width: 95%; /* Increased image size */
+        height: min-content;
+        margin-bottom: 2em; 
+        
+        
+    }
+
+    a {
+        color:blueviolet;
+        text-decoration: none;
+    }
+    
+    a:hover {
+        text-decoration: underline;
     }
 }
 
 
-
-/* Right bar content sections */
-.content-section {
-    display: none; /* Initially hide all sections */
-    margin-bottom: 2em; /* Space between sections */
-}
-
-.content-section h1 {
-    font-size: 2em;
-    margin-bottom: 1em;
-}
-
-/* To show the active section */
-.content-section.active {
-    display: block; /* Only the active section will be visible */
-}
-
-
-/* Installations icin Grid Style */
-#installations .grid-container {
-    display:block;
-    grid-template-columns: repeat(5, 1fr); /* 3 sütunlu bir grid */
-    gap: 2em; /* Hücreler arasındaki boşluk */
-    margin-top: 2em;
-}
-
-#installations .grid-item {
-    width: 500%;
-    height: 450px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px; /* Kenarları yuvarlatılmış */
-}
 
 
 /* projects.css */
@@ -160,53 +172,122 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 30px;
+
+    h1 {
+        font-size: 2em;
+        margin-bottom: 1em;
+    }
+
+    p {
+        font-size: 1.2em;
+        color: white;
+        font-family: monospace;
+        margin-bottom: 1em;
+    }
+
+    li {
+        width: 100%;
+        max-width: 900px;
+        margin-bottom: 40px;
+    }
+
+  
+
+    .scaled-video {
+        width: 100%;
+        max-width: 800px;
+        margin-top: 10px;
+    }
+
+    .scaled-video-half-size {
+        width: 40%; 
+        height: 40%;
+        display: inline-block;
+        margin-right: 10px; 
+        margin-left: 40px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .scaled-video-quarter-size {
+        width: 30%; 
+        height: 30%;
+        display: inline-block;
+        align-self: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .scaled-gif {
+        max-width: 95%; /* Increased image size */
+        height: auto;
+    }
 }
 
-.project-list li {
+
+
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(69, 11, 123);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: turquoise;
+}
+
+
+.scrollbar-particles {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    display: block;
+    top: 0;
+    left: 0;
     width: 100%;
-    max-width: 800px;
-    margin-bottom: 40px;
+    height: 100%;
 }
 
-.project-list .scaled-video {
-    width: 100%;
-    max-width: 800px;
-    margin-top: 10px;
+.particle {
+    position: absolute;
+    width: 10px; /* Particle size */
+    height: 10px;
+    background-color: blueviolet;
+    border-radius: 50%;
+    clip-path: polygon(50% 0%, 0% 10%, 40% 100%, 60% 100%, 100% 40%); /* Heart shape */
+    animation: particle-animation 2.5s forwards, color-shift 2.5s forwards;
+    opacity: 0.5;
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.7); /* Glowing effect */
 }
 
-.project-list .scaled-video-half-size {
-    width: 40%; 
-    height: 40%;
-    display: inline-block;
-    margin-right: 10px; 
-    margin-left: 40px;
-    margin-top: 10px;
+@keyframes particle-animation {
+    0% {
+        transform: scale(0) translate(var(--x), var(--y));
+        opacity: 1;
+    }
+    50% {
+        transform: scale(0.65) translate(var(--x), var(--y));
+        opacity: 0.51;
+    }
+    100% {
+        transform: translate(var(--x), var(--y)) scale(0);
+        opacity: 0;
+    }
 }
 
-.project-list .scaled-image-border-large {
-    width: 60%;
-    max-width: 600px;
-    max-height: 600px;
-    margin-top: 10px;
-    align-self: center;
-}
-
-.project-list h1 {
-    font-size: 2em;
-    margin-bottom: 1em;
-}
-
-.project-list p {
-    font-size: 1em;
-    color: white;
-    margin-bottom: 1em;
-}
-
-.project-list a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-.project-list a:hover {
-    text-decoration: underline;
+@keyframes color-shift {
+    0% {
+        background-color: blueviolet;
+    }
+    100% {
+        background-color: turquoise;
+    }
 }

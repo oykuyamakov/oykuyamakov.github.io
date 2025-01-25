@@ -13,13 +13,13 @@
 
 <body>
     <div class="container">
-        <header style="margin-bottom: 20px;"> <!-- Added margin to create space -->
+
+        <header style="margin-bottom: 20px;">
             <div class="up-bar">
                 <li>
-                <h1>Oyku Yamak</h1> <!-- Header -->
-                <h2>Multidisciplinary Designer - Programmer </h2>
+                    <h1>Oyku Yamak</h1>
+                    <h2>Multidisciplinary Designer & Programmer</h2>
                 </li>
-                <img class="scaled-logo" src="images/BWLogo2.png" alt="Oyku Yamakoglu">
             </div>
         </header>
 
@@ -30,100 +30,192 @@
                     <ul>
                         <li><a href="index.html">About</a></li>
                         <li><a href="games.html">Games</a></li>
-                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="projects.html">Tech Art</a></li>
                     </ul>
                 </nav>
             </div>
+
             <div class="content">
-                <!-- Section: Acid Lazuri -->
                 <ul class="body-info project-list">
+                    <!-- Algorave Istanbul -->
                     <li>
-                        <h1>Acid Lazuri</h1>
-                        <p>
-                            Gurbet - an audio-visual performance by Acid Lazuri showcased at Jay Street ITP.
-                            Created with Unity, HLSL, VFX graph.
-                        </p>
-                        <iframe class="scaled-video" width="560" height="315" src="https://www.youtube.com/embed/eoavRUAIT40" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-                    </li>
-
-                    <!-- Section: Aalto University - Echoes of Water Seminar -->
-                    <li>
-                        <h1>Aalto University - Embodied Water Seminar</h1>
-                        <p>
-                            <strong>The Cycle</strong> - An immersive experience connecting diverse media to explore the story of human nature and water cycles.
-                            Installation Created with TouchDesigner and Azure Kinect by Oyku and Ziyu. 
-                        </p>
-                        <p> 
-                            The film shot by Saranya, Ziga, Oyku, and Ziyu.
-                        </p>
-                        <iframe class="scaled-video" width="560" height="315" src="https://www.youtube.com/embed/b-Y0i8tzR04" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <video class="scaled-video-half-size" controls>
-                            <source src="videos/aalto1.mp4" type="video/mp4">
+                        <h1>>Algorave Istanbul 1.18.25</h1>
+                        <video id="algo-video" class="scaled-video" controls autoplay loop muted playsinline>
+                            <source src="images/algorave/algo_hor_Vid.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
-                        <video class="scaled-video-half-size" controls>
-                            <source src="videos/aalto2.mp4" type="video/mp4">
+                        <img id="algo-gif" class="scaled-gif" src="images/algorave/algorave_header_gif.gif" alt="Algo" style="display: none;">                    
+                        <p>
+                            An audio-visual performance by Yuko, Uzak, Arian, and Baramuk, performed at <a href="https://www.instagram.com/nohextended/?hl=en" target="_blank">nohextended</a>. 
+                        </p>
+                        <br>
+                        <p style="font-size: 1em;">
+                            Audio-reactive point-cloud data, edited live, was transferred to Unity via Spout. Unity's powerful HDRP was utilized to craft VFX with texture 2D point-cloud data, enhanced by post-processing and lighting effects.
+                        </p>
+                        <p style="font-size: 1em;">
+                            A live-edited Stable Diffusion texture from TouchDesigner, transmitted over the local network, was integrated into the Unity 3D scene as a backdrop, seamlessly blending various media into a cohesive composition.
+                        </p>
+                        <video id= "hover-video-first" class="scaled-video-quarter-size" controls autoplay loop muted playsinline>
+                            <source src="images/algorave/algorave_vertical_vid.MOV" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
-                        <img class="scaled-image-border-large" src="videos/altoInfo.png" alt="The Cycle - Photo 1">
+                        <img class="scaled-video-quarter-size" src="images/algorave/algorave_midpic2.PNG" alt="Algorave Istanbul">
+                        <video  id="hover-video" class="scaled-video-quarter-size" loop muted playsinline>
+                            <source src="images/algorave/algorave_vertical_vid2.MOV" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+
+                        <p>                            
+                           <a href="https://www.instagram.com/arian_canaen/" target="_blank">@arian</a> 
+                           <br>
+                           <a href="https://www.instagram.com/tugrulsalci/" target="_blank">@uzak</a> 
+                           <br>
+                           <a href="https://www.instagram.com/berkebaramuk/" target="_blank">@baramuk</a> 
+                        </p>
+
                     </li>
 
-                    <!-- Section: Itch.io Games and Projects -->
+                    <!-- Unity VJing -->
                     <li>
-                        <h1>Itch.io Games and Projects</h1>
+                        <h1>>Gurbet - Alter Egos: Audio Visual Showcase | NYU ITP</h1>
+                        <video class="scaled-video" autoplay loop muted playsinline>
+                            <source src="images/alteregos/alteregos_nice_mix.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+            
                         <p>
-                            Check out my games and other projects on
-                            <a href="https://oykuyamako.itch.io/" target="_blank">Itch.io</a>.
+                            <strong>Gurbet</strong> is an audio-visual performance by Yuko, presented at the "Alter Egos: Audio Visual Showcase" hosted by Ali Santana at NYU ITP.
                         </p>
-                        <p>
-                    
-                            <a href="https://oykuyamako.itch.io/glu-glu-screen-saver" target="_blank">
-                                Glu Glu Screensaver
-                            </a>.
+                        <p style="font-size: 1em;">
+                            Developed in Unity, gurbet combines custom HLSL shaders, URP post-processing, and a unique data-moshing shader integrated through custom render passes.  
                         </p>
-                        <p>
-                    
-                            <a href="https://oykuyamako.itch.io/trip" target="_blank">
-                                A *Trip* simulation
-                            </a>.
+                        <p style="font-size: 1em;">
+                            By utilizing camera motion vectors, the shaders seamlessly merge the 3D environment with a background video, creating a dynamic data moshing-effect. The video backdrop features a 140 Journos documentary.
                         </p>
-                    </li>
-
-                    <li>
-                        <h1>Cultural Games Talk</h1>
-                        <p>Game Center Thesis Presentation</p>
-
-                        <iframe class="scaled-video" width="560" height="315" src="https://www.youtube.com/embed/EEg2iI9TGnw?start=8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
-
+                        <p style="font-size: 1em;">
+                            Music: Hey Douglas - <i>Deterjan</i>.
+                        </p>
                         
+                        <p>Watch the showcase video below:</p>
+                        <iframe class="scaled-video" width="560" height="315" src="https://www.youtube.com/embed/eoavRUAIT40" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </li>
 
-                    <!-- Section: Random Work -->
+                    <!-- The Cycle -->
                     <li>
-                        <h1>Random Work</h1>
-                        <p>Mosh in Unity</p>
-                        <video class="scaled-video" controls>
+                        <h1>>The Cycle - Aalto University</h1>
+                        <img class="scaled-gif" src="images/aalto/aaltomix.gif" alt="The Cycle - Info">
+                        <p>
+                            <strong>The Cycle</strong> is an immersive experience exploring the interplay between human nature and water cycles through film, installation, and performance. 
+                        </p>
+                        <p style="font-size: 1em;">
+                            The installation, created by Yiko and Ziyu, uses TouchDesigner and Azure Kinect to visualize the water cycle's various phases. By manipulating noise patterns, participants interact with and experience different states of water. 
+                            The accompanying film was shot by Saranya, Ziga, Oyku, and Ziyu in Helsinki.
+                        </p>
+                        <p style="font-size: 1em;">Watch the film and installation videos below:</p>
+                        <iframe class="scaled-video"  width="560" height="315" src="https://www.youtube.com/embed/b-Y0i8tzR04" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </li>
+
+                    <!-- Itch.io Games -->
+                    <li>
+                        <h1>>Itch.io Games and Projects</h1>
+                        <p>
+                            Discover my games and projects on <a href="https://oykuyamako.itch.io/" target="_blank">Itch.io</a>. Here are some highlights:
+                        </p>
+                        <ul>
+                            <li><a href="https://oykuyamako.itch.io/glu-glu-screen-saver" target="_blank">Glu Glu Screensaver</a></li>
+                            <li><a href="https://oykuyamako.itch.io/trip" target="_blank">A *Trip* Simulation</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Random Work -->
+                    <li>
+                        <h1>Random Work Snippets</h1>
+                        <p><strong>Mosh in Unity</strong></p>
+                        <video class="scaled-video" controls autoplay loop muted playsinline>
                             <source src="videos/mosh.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
-                        <p>Draft Music Video</p>
-                        <video class="scaled-video" controls>
-                            <source src="videos/high.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                        <p><strong>Draft Music Video</strong></p>
+                        
                     </li>
 
                     <!-- Contact -->
-                    <li>
-                        <p>oykuyamak@gmail.com</p>
-                    </li>
+                    <p>                            
+                        instagram: <a href="https://www.instagram.com/madayten/" target="_blank">@madayten</a> 
+                        <br>
+                        github <a href="https://github.com/oykuyamakov" target="_blank">@oykuyamakov</a> 
+                        <br>
+                        itch.io <a href="https://oykuyamako.itch.io/" target="_blank">@yuko</a>
+                     </p>     
+                     <p><a href="mailto:oykuyamak@gmail.com?subject=Hi%20yuko&body=Sup">oykuyamak@gmail.com</a></p>
                 </ul>
             </div>
         </main>
     </div>
+    <script src="script.js"></script>
+
+    <script>
+        
+
+            const videoElement = document.getElementById("algo-video");
+            const gifElement = document.getElementById("algo-gif");
+
+
+            const videoDuration = 15000; 
+            const gifDuration = 4000;   
+
+            function toggleMedia() {
+                if (videoElement.style.display === "none") {
+                    videoElement.style.display = "block";
+                    gifElement.style.display = "none";
+                    videoElement.play();
+                    setTimeout(toggleMedia, videoDuration);
+                } else {
+                    videoElement.style.display = "none";
+                    videoElement.pause();
+                    gifElement.style.display = "block";
+                    setTimeout(toggleMedia, gifDuration);
+                }
+            }
+
+            document.addEventListener("DOMContentLoaded", () => {
+                setTimeout(toggleMedia, videoDuration);
+            });
+
+
+            const hoverVid = document.getElementById("hover-video");
+            const hoverVidFirst = document.getElementById("hover-video-first");
+
+            // Videonun başlangıç noktasını ayarla (3. saniye)
+            hoverVid.addEventListener("loadeddata", () => {
+                hoverVid.currentTime = 13; // Videoyu 3. saniyeye ayarla
+            });
+
+            // Hoverlandığında videoyu oynat
+            hoverVid.addEventListener("mouseenter", () => {
+                hoverVid.play();
+                hoverVidFirst.play();
+            });
+
+
+            // Hoverdan çıkıldığında videoyu oynatmaya devam et (durdurma yok)
+            hoverVid.addEventListener("mouseleave", () => {
+                hoverVid.pause(); 
+                hoverVidFirst.pause();
+            });
+
+
+            hoverVidFirst.addEventListener("mouseenter", () => {
+                hoverVidFirst.play();
+                hoverVid.play();
+            });
+
+            hoverVidFirst.addEventListener("mouseleave", () => {
+                hoverVidFirst.pause();
+                hoverVid.pause(); 
+            });
+
+    </script>
 </body>
 
 </html>
