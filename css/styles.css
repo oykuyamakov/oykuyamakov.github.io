@@ -291,3 +291,64 @@ body {
         background-color: turquoise;
     }
 }
+
+
+/* Horizontal line at the end of each section */
+hr {
+    border: none;
+    height: 5px;
+    background: rgb(69, 11, 123);
+    margin: 3em 0; /* Space above and below */
+    position: relative;
+}
+
+/* Adding a cool effect to the line */
+hr::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 30%;
+    height: 5px;
+    background: #248bd0;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.7); /* Glow effect */
+}
+
+hr::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 30%;
+    height: 5px;
+    background: #248bd0;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.7); /* Glow effect */
+}
+
+/* Add some animations for the line */
+@keyframes line-animate {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+/* Initial state of the horizontal line */
+hr.animated-line {
+    border: 0;
+    border-top: 2px solid transparent;
+    width: 90%;
+    transition: width 1s ease-out, border-color 0.5s ease;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* Animation when the line is triggered */
+  hr.animated-line.animate {
+    width: 0%;
+    border-color: blueviolet; /* Change color as needed */
+  }
