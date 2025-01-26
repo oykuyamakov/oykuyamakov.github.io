@@ -41,10 +41,10 @@
                     <li>
                         <h1>>Algorave Istanbul 1.18.25</h1>
                         <video id="algo-video" class="scaled-video" controls autoplay loop muted playsinline>
-                            <source src="images/algorave/algo_hor_Vid.mp4" type="video/mp4">
+                            <source src="images/algorave/algoravelong_decsize.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
-                        <img id="algo-gif" class="scaled-gif" src="images/algorave/algorave_header_gif.gif" alt="Algo" style="display: none;">                    
+                        <img id="algo-gif" class="scaled-gif" src="images/algorave/algorave_header_gif_optimize.gif" alt="Algo" style="display: none;">                    
                         <p>
                             An audio-visual performance by Yuko, Uzak, Arian, and Baramuk, performed at <a href="https://www.instagram.com/nohextended/?hl=en" target="_blank">nohextended</a>. 
                         </p>
@@ -56,12 +56,12 @@
                             A live-edited Stable Diffusion texture from TouchDesigner, transmitted over the local network, was integrated into the Unity 3D scene as a backdrop, seamlessly blending various media into a cohesive composition.
                         </p>
                         <video id= "hover-video-first" class="scaled-video-quarter-size" controls autoplay loop muted playsinline>
-                            <source src="images/algorave/algorave_vertical_vid.MOV" type="video/mp4">
+                            <source src="images/algorave/algorave_dec_short1.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                         <img class="scaled-video-quarter-size" src="images/algorave/algorave_midpic2.PNG" alt="Algorave Istanbul">
                         <video  id="hover-video" class="scaled-video-quarter-size" loop muted playsinline>
-                            <source src="images/algorave/algorave_vertical_vid2.MOV" type="video/mp4">
+                            <source src="images/algorave/algorave_dec_short2.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
 
@@ -78,11 +78,10 @@
                     <!-- Unity VJing -->
                     <li>
                         <h1>>Gurbet - Alter Egos: Audio Visual Showcase | NYU ITP</h1>
-                        <video class="scaled-video" autoplay loop muted playsinline>
-                            <source src="images/alteregos/alteregos_nice_mix.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-            
+
+                        <img id="alter1" class="scaled-gif" src="images/alteregos/alteregos_intro_gif-ezgif.com-optimize.gif" alt="alterego">  
+                        <img id="alter2" class="scaled-gif" src="images/alteregos/ezgif.com-optimize.gif" alt="alterego" style="display: none;">                    
+
                         <p>
                             <strong>Gurbet</strong> is an audio-visual performance by Yuko, presented at the "Alter Egos: Audio Visual Showcase" hosted by Ali Santana at NYU ITP.
                         </p>
@@ -103,7 +102,7 @@
                     <!-- The Cycle -->
                     <li>
                         <h1>>The Cycle - Aalto University</h1>
-                        <img class="scaled-gif" src="images/aalto/aaltomix.gif" alt="The Cycle - Info">
+                        <img class="scaled-gif" src="images/aalto/aaltomix-optimize.gif" alt="The Cycle - Info">
                         <p>
                             <strong>The Cycle</strong> is an immersive experience exploring the interplay between human nature and water cycles through film, installation, and performance. 
                         </p>
@@ -155,14 +154,14 @@
     <script src="script.js"></script>
 
     <script>
-        
-
             const videoElement = document.getElementById("algo-video");
             const gifElement = document.getElementById("algo-gif");
 
+            const alter1 = document.getElementById("alter1");
+            const alter2 = document.getElementById("alter2");
 
-            const videoDuration = 15000; 
-            const gifDuration = 4000;   
+            const videoDuration = 40000; 
+            const gifDuration = 8000;   
 
             function toggleMedia() {
                 if (videoElement.style.display === "none") {
@@ -178,8 +177,21 @@
                 }
             }
 
+            function toggleAlterMedia() {
+                if (alter1.style.display === "none") {
+                    alter1.style.display = "block";
+                    alter2.style.display = "none";
+                    setTimeout(toggleAlterMedia, 10000);
+                } else {
+                    alter1.style.display = "none";
+                    alter2.style.display = "block";
+                    setTimeout(toggleAlterMedia, 10000);
+                }
+            }
+
             document.addEventListener("DOMContentLoaded", () => {
                 setTimeout(toggleMedia, videoDuration);
+                setTimeout(toggleAlterMedia, gifDuration);
             });
 
 
