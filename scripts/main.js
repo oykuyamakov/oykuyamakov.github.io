@@ -7,8 +7,12 @@ document.body.appendChild(particlesContainer);
 
 let particleCount = 20;  // Number of particles per mouse move
 
+let lastMouseX = window.innerWidth / 2;
+let lastMouseY = window.innerHeight / 2;
+
+
 // Function to create particles
-function createParticles(e) {
+function createParticles(x,y) {
     const particle = document.createElement('div');
     particle.classList.add('particle');
 
@@ -16,9 +20,10 @@ function createParticles(e) {
     const randomX = (Math.random() - 0.5) * 2050;
     const randomY = (Math.random() - 0.5) * 5000;
 
+
     // Position the particle where the mouse is
-    particle.style.left = `${e.clientX}px`;
-    particle.style.top = `${e.clientY}px`;
+    particle.style.left = `${x}px`;
+    particle.style.top = `${y}px`;
 
     // Set the random movement using custom properties
     particle.style.setProperty('--x', `${randomX}px`);
@@ -35,8 +40,19 @@ function createParticles(e) {
 
 // Event listener for mouse movement on the entire document
 document.body.addEventListener('click', function(e) {
-    for (let i = 0; i < particleCount; i++) {
-        createParticles(e);
+    for (let i = 0; i < particleCount *2 ; i++) {
+        createParticles(e.clientX, e.clientY);
     }
 });
 
+document.addEventListener('mousemove', (e) => {
+    lastMouseX = e.clientX;
+    lastMouseY = e.clientY;
+});
+
+
+setInterval(() => {
+    for (let i = 0; i < particleCount; i++) {
+        createParticles(lastMouseX, lastMouseY);
+    }
+}, 3000);
