@@ -1,354 +1,288 @@
-body {
-    background: black;
-    margin: 0;
-    font-family: monospace;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+/* Reset + base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* Tum sayfa */
+body {
+  background: black;
+  color: white;
+  font-family: monospace;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  .details-list{
+
+  margin-bottom: 2em;
+
+    margin-left: 5em;
+    list-style:disc;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+}
+
+a {
+  color: blueviolet;
+  text-decoration: underline;
+
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 .container {
-    margin: 3em;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2em 1em;
 }
 
 /* Header */
 .up-bar {
-    color: white;
-    font-weight: bold;
-    font-family: monospace;
-    font-size: 1.5em;
-
-    h1 {
-        margin-bottom: 5px;
-    }
-    
-    /* Isim alti info */
-    h2 {
-        font-weight: normal;
-        font-size: smaller;
-        margin-top: 0;
-    }
-    
-    list-style: none;
-    flex-direction: row;
-    justify-content: space-between;
-    display: flex;
-    
-    li {
-        margin: 0em;
-    }
-
-    .scaled-logo {
-        max-width: 6%;
-        max-height: 4%;
-        margin-right: 1em;
-        align-self: flex-end;
-    }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 2em;
 }
 
+.up-bar h1 {
+  font-size: 2em;
+  margin-bottom: 0.3em;
+}
 
+.up-bar h2 {
+  font-size: 1em;
+  font-weight: normal;
+}
 
-/* Sidebar left */
+/* Navigation */
 .left-bar {
-    color: white;
-    font-weight: bold;
-    position: fixed;
-    font-size: 1.5em;
+  position: sticky;
+  top: 0;
+  background: black;
+  padding: 0.5em 0;
+  z-index: 100;
+  text-align: center;
+  border-top: 1px solid #444;
+  border-bottom: 1px solid #444;
+}
 
-   
-    margin-left: 0; /* Closer to the left */
-    padding-left: 0; /* Remove extra padding */
+.left-bar nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
 
+.left-bar a {
+  font-weight: bold;
+}
 
-    nav ul {
-        list-style: none;
-        padding: 0;
-        margin-top: 2em;
-        margin-left: 0;
-    
-        li {
-            margin-bottom: 10px; /* Reduced spacing between items */
-        }
-    }
-    
-    a {
-        color: rgb(69, 11, 123);
-        text-decoration: none;
-        font-weight: bold;
-        
-    }
+/* Main Layout */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+}
 
-    a:hover {
-        color: purple;
-    }
-
-    a:focus{
-        color: turquoise;
-
-    }
-    
-    
+.right-bar,
+.content {
+  width: 100%;
 }
 
 
-
-
-/* body on all pages */
-.content{
-    font-size: 1.1em;
+.aboutpage-body > li {
+  max-width: 600px;
 }
 
-
-.content-aboutpage{
-
-    font-size: 1.2em;
-    p{
-        margin-bottom: 2em; /* Adds two lines of spacing between paragraphs */
-
-        
-       
-    }
-
-    p span.heart {
-        color: pink;
-        font-size: 1.5em; /* Adjust the size of the hearts if necessary */
-    }
-
-    .aboutpage-body{
-        margin-left: 10em;
-
-      
-    }
+.scaled-image-border-large {
+  border: 3px solid white;
+  margin-bottom: 2em;
 }
 
-
-.body-info {
-    display: flex;
-    color: white;
-    font-size: 1em;
-    font-weight: lighter;
-    list-style: none;
-    flex-direction: row;
-
-    li {
-        margin: 1em;
-    }
-    
-    .scaled-image-border-large {
-        max-width: 85%; /* Increased image size */
-        height: auto;
-        margin-left: 8em;
-        margin-bottom: 5em;
-    }
-
-
-
-    .scaled-image-header{
-
-        max-width: 95%; /* Increased image size */
-        height: min-content;
-        margin-bottom: 2em; 
-        
-        
-    }
-
-    a {
-        color:blueviolet;
-        text-decoration: none;
-    }
-    
-    a:hover {
-        text-decoration: underline;
-    }
-}
-
-
-
-
-/* projects.css */
+/* Project List */
 .project-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-
-    h1 {
-        font-size: 2em;
-        margin-bottom: 1em;
-    }
-
-    p {
-        font-size: 1.2em;
-        color: white;
-        font-family: monospace;
-        margin-bottom: 1em;
-    }
-
-    li {
-        width: 100%;
-        max-width: 900px;
-        margin-bottom: 40px;
-    }
-
-  
-
-    .scaled-video {
-        width: 100%;
-        max-width: 800px;
-        margin-top: 10px;
-    }
-
-    .scaled-video-half-size {
-        width: 40%; 
-        height: 40%;
-        display: inline-block;
-        margin-right: 10px; 
-        margin-left: 40px;
-        margin-top: 50px;
-        margin-bottom: 50px;
-    }
-
-    .scaled-video-quarter-size {
-        width: 30%; 
-        height: 30%;
-        display: inline-block;
-        align-self: center;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-
-    .scaled-gif {
-        max-width: 95%; /* Increased image size */
-        height: auto;
-    }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4em;
 }
 
+.project-list li {
+  max-width: 900px;
+  width: 100%;
+  
+}
 
+.project-list h1 {
+  font-size: 1.6em;
+  margin-bottom: 1em;
+}
 
+.project-list p {
+  margin-bottom: 1em;
+}
 
+.scaled-gif,
+.scaled-video,
+.scaled-image-header {
+  border-radius: 4px;
+  margin-bottom: 1.5em;
+  width: 100%;
+  height: 100%;
+}
+
+.scaled-video-quarter-size {
+  width: 29%;
+  margin: 1em;
+  display: inline-block;
+}
+
+hr.animated-line {
+  border: none;
+  height: 5px;
+  background: rgb(69, 11, 123);
+  position: relative;
+  margin: 3em 0;
+}
+
+hr.animated-line::before,
+hr.animated-line::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 30%;
+  height: 5px;
+  background: #248bd0;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.7);
+}
+
+hr.animated-line::before {
+  left: 0;
+}
+
+hr.animated-line::after {
+  right: 0;
+}
+
+/* Scrollbar */
 ::-webkit-scrollbar {
-    width: 12px;
+  width: 12px;
 }
 
 ::-webkit-scrollbar-track {
-    background: black;
+  background: black;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgb(69, 11, 123);
-    border-radius: 10px;
+  background: rgb(69, 11, 123);
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: turquoise;
+  background: turquoise;
 }
 
+/* Responsive */
+@media (max-width: 768px) {
+  .left-bar nav ul {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .aboutpage-body {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .scaled-video-quarter-size {
+    width: 80%;
+  }
+}
+
+.aboutpage-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 3em;
+  margin-top: 3em;
+  
+}
+
+.aboutpage-body > li:first-child {
+  max-width: 600px;
+  
+}
+
+.aboutpage-body > li:last-child {
+  flex: 1 1 250px;
+}
+
+.aboutpage-body li p {
+  margin-bottom: 1.5em;
+}
 
 .scrollbar-particles {
-    position: fixed;
-    pointer-events: none;
-    z-index: 9999;
-    display: block;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
 }
 
 .particle {
-    position: absolute;
-    width: 10px; /* Particle size */
-    height: 10px;
-    background-color: blueviolet;
-    border-radius: 50%;
-    clip-path: polygon(50% 0%, 0% 10%, 40% 100%, 60% 100%, 100% 40%); /* Heart shape */
-    animation: particle-animation 2.5s forwards, color-shift 2.5s forwards;
-    opacity: 0.5;
-    box-shadow: 0 0 20px rgba(255, 0, 255, 0.7); /* Glowing effect */
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: blueviolet;
+  border-radius: 50%;
+  opacity: 0.5;
+  animation: particle-animation 2.5s forwards, color-shift 2.5s forwards;
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.7);
+  clip-path: polygon(50% 0%, 0% 10%, 40% 100%, 60% 100%, 100% 40%);
 }
 
 @keyframes particle-animation {
-    0% {
-        transform: scale(0) translate(var(--x), var(--y));
-        opacity: 1;
-    }
-    50% {
-        transform: scale(0.65) translate(var(--x), var(--y));
-        opacity: 0.51;
-    }
-    100% {
-        transform: translate(var(--x), var(--y)) scale(0);
-        opacity: 0;
-    }
+  0% {
+    transform: scale(0) translate(var(--x), var(--y));
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.65) translate(var(--x), var(--y));
+    opacity: 0.51;
+  }
+  100% {
+    transform: translate(var(--x), var(--y)) scale(0);
+    opacity: 0;
+  }
 }
 
 @keyframes color-shift {
-    0% {
-        background-color: blueviolet;
-    }
-    100% {
-        background-color: turquoise;
-    }
-}
-
-
-/* Horizontal line at the end of each section */
-hr {
-    border: none;
-    height: 5px;
-    background: rgb(69, 11, 123);
-    margin: 3em 0; /* Space above and below */
-    position: relative;
-}
-
-/* Adding a cool effect to the line */
-hr::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 30%;
-    height: 5px;
-    background: #248bd0;
-    border-radius: 5px;
-    box-shadow: 0 0 15px rgba(255, 0, 255, 0.7); /* Glow effect */
-}
-
-hr::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    right: 0;
-    width: 30%;
-    height: 5px;
-    background: #248bd0;
-    border-radius: 5px;
-    box-shadow: 0 0 15px rgba(255, 0, 255, 0.7); /* Glow effect */
-}
-
-/* Add some animations for the line */
-@keyframes line-animate {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: 100%;
-    }
-}
-
-/* Initial state of the horizontal line */
-hr.animated-line {
-    border: 0;
-    border-top: 2px solid transparent;
-    width: 90%;
-    transition: width 1s ease-out, border-color 0.5s ease;
-    margin-top: 20px;
-    margin-bottom: 20px;
+  0% {
+    background-color: blueviolet;
   }
-  
-  /* Animation when the line is triggered */
-  hr.animated-line.animate {
-    width: 0%;
-    border-color: blueviolet; /* Change color as needed */
+  100% {
+    background-color: turquoise;
   }
+}
