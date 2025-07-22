@@ -17,237 +17,362 @@
             <div class="up-bar">
                 <li>
                     <h1>Oyku Yamak</h1> <!-- Header -->
-                    <h2>Multidisciplinary Designer - Programmer </h2>
+                    <h2>Game Programmer - Technical Artist</h2>
                 </li>
             </div>
         </header>
-         <div class="left-bar">
-                <nav>
-                    <ul>
-                        <li><a href="index.html">About</a></li>
-                        <li><a href="games.html">Games</a></li>
-                        <li><a href="projects.html">Tech Art</a></li>
-                    </ul>
-                </nav>
-            </div>
-
+        <div class="left-bar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="games.html" class="active-page">Games</a></li>
+                    <li><a href="projects.html">Tech Art</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="section-nav">
+            <ul>
+                <li data-target="istanbul">Istanbul</li>
+                <li data-target="highrollers">Highrollers</li>
+                <li data-target="merge">Merge Barista</li>
+                <li data-target="belgrad">Belgrad Park</li>
+                <li data-target="other">Other</li>
+            </ul>
+        </div>
         <main>
-
-           <br>
+            <section id="start"> </section>
+            <div class="header-section">
+                <div class="header-box" onclick="scrollToSection('istanbul')">
+                    <img src="images/games/istanbul/Istanbul_Poster.jpg" alt="Istanbul">
+                    <div class="header-content">
+                        <h3>Istanbul</h3>
+                        <p>3D first-person exploration game</p>
+                        <div class="header-tags">
+                            <span class="tag unity">#Unity</span>
+                            <span class="tag blender">#Blender</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-box" onclick="scrollToSection('highrollers')">
+                    <img src="images/games/hrl_header.jpg" alt="Highrollers">
+                    <div class="header-content">
+                        <h3>Highrollers</h3>
+                        <p>3D boss-battler RPG</p>
+                        <div class="header-tags">
+                            <span class="tag unity">#Unity</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-box" onclick="scrollToSection('merge')">
+                    <img src="images/games/merge_1_ad.png" alt="Merge Barista">
+                    <div class="header-content">
+                        <h3>Merge Barista</h3>
+                        <p>Casual mobile game published by Zynga</p>
+                        <div class="header-tags">
+                            <span class="tag unity">#Unity</span>
+                            <span class="tag blender">#Mobile</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-box" onclick="scrollToSection('belgrad')">
+                    <img src="images/games/belgradpark_header.jpg" alt="Belgrad Park">
+                    <div class="header-content">
+                        <h3>Belgrad Park</h3>
+                        <p>3D first-person horror game</p>
+                        <div class="header-tags">
+                            <span class="tag unity">#Unity</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
                 <ul class="body-info project-list">
                     <!-- Section: Istanbul -->
-                    <li>
-                        <img class="scaled-image-header" src="images/games/istanbul/Istanbul_Poster.jpg" alt="Istanbul Poster">
-                        <p style="font-size: larger;"><strong>Istanbul</strong> is a 3D  first person, narrative-driven exploration game that takes place in a haunting reconstruction of Istanbul. The game reflects on migration, longing, and urban transformation through atmospheric storytelling and interactive systems.</p>
-                        
-                        <!-- Showcase gifs -->
-                         <div style="display: flex; flex-wrap: wrap; gap: 1em;">
-                            <img class="scaled-image-header" src="images/games/istanbul/istgif4.gif" alt="Istanbul gif 2" style="width: 48%; height: auto; object-fit: cover;">
-                            <img class="scaled-image-header" src="images/games/istanbul/istgif3.gif" alt="Istanbul gif 2" style="width: 48%; height: auto; object-fit: cover;">
-                        </div>
+                    <section id="istanbul">
                         <br>
-                        <!-- Role Section -->
-                        <p style="font-size: larger;">
-                            Role: <strong>Solo Developer, Gameplay Programmer <span style="color: #B3E1FF;">(Unity)</span>, Technical Artist <span style="color: #B3E1FF;">(HLSL/Shader Graph)</span>, 3D Artist<span style="color: #B3E1FF;">(Blender)</span>,  Narrative Designer <a href="https://github.com/oykuyamakov" target="_blank"></a>(CDs)</a> </strong>
-                        </p>
-                        <br>
+                        <li id="istanbul">
+                            <img class="scaled-image-header" src="images/games/istanbul/Istanbul_Poster.jpg"
+                                alt="Istanbul Poster">
+                            <p style="font-size: larger;"><strong>Istanbul</strong> is a 3D first person,
+                                narrative-driven exploration game that takes place in a haunting reconstruction of
+                                Istanbul. The game reflects on migration, longing, and urban transformation through
+                                atmospheric storytelling and interactive systems.</p>
 
-                        <!-- Features -->
-                        <ul class="details-list">
-                            <li><strong>Node Based Dialogue Editor :  </strong><span style="color: #E3B3FF;"> OOP oriented</span> custom <span style="color: #E3B3FF;"> node-based dialogue editorh</span> with runtime JSON parsing, and scalable logic architecture. 
-                                <a href="https://github.com/oykuyamakov" target="_blank">View it on GitHub</a>
-                            </li>
-                            <li><strong>Shader Work : </strong> Custom <span style="color: #E3B3FF;">HLSL/Shader Graph</span> effects for outlines, distortion, parallax fog, glitch feedback</li>
-                            <li><strong>3D Art:</strong> Modeled assets in <span style="color: #E3B3FF;">Blender</span>, optimized for low-poly visuals and high performance</li>
-                            <li><strong>C# Systems : </strong> OOP oriented game systems, custom game event management, and 3d physics</li>
-                            <li><strong>Performance : </strong> Async loading, GPU-conscious design, low-overhead FX and visuals</li>
-                        </ul>
-                        <br>
-                        <!-- Presentation Section -->
-                        <p><strong>Presented at:</strong> 
-                            <span style="color: #E3B3FF;">NYU Game Center Spring Showcase 2025</span>, 
-                            <span style="color: #B3E1FF;">NYC Games Festival 2025</span>, 
-                            <span style="color: #FFCBA6;">GDC 2025</span>
-                        </p>
+                            <!-- Showcase gifs -->
+                            <div style="display: flex; flex-wrap: wrap; gap: 1em;">
+                                <img class="scaled-image-header" src="images/games/istanbul/istgif4.gif"
+                                    alt="Istanbul gif 2" style="width: 48%; height: auto; object-fit: cover;">
+                                <img class="scaled-image-header" src="images/games/istanbul/istgif3.gif"
+                                    alt="Istanbul gif 2" style="width: 48%; height: auto; object-fit: cover;">
+                            </div>
+                            <br>
+                            <!-- Role Section -->
+                            <p style="font-size: larger;">
+                                Role: <strong>Solo Developer, Gameplay Programmer <span
+                                        style="color: #B3E1FF;">(Unity)</span>, Technical Artist <span
+                                        style="color: #B3E1FF;">(HLSL/Shader Graph)</span>, 3D Artist<span
+                                        style="color: #B3E1FF;">(Blender)</span>, Narrative Designer <a
+                                        href="https://github.com/oykuyamakov" target="_blank"></a>(CDs)</a> </strong>
+                            </p>
+                            <br>
 
-                        <br>
-
-                        <!-- 2x2 Image Grid -->
-                        <div style="display: flex; flex-wrap: wrap; gap: 1em;">
-                            <img src="images/games/istanbul/istnabulshowcase5.jpg" alt="Istanbul 1" style="width: 48%; height: auto; object-fit: cover;">
-                            <img src="images/games/istanbul/istanbulgameshowcase1.jpg" alt="Istanbul 3" style="width: 48%; height: auto; object-fit: cover;">
-                            <img src="images/games/istanbul/ist_showcasegif2.gif" alt="Istanbul 2" style="width: 48%; height: auto; object-fit: cover;">
-                            <img src="images/games/istanbul/istanbulshowcase4.jpg" alt="Istanbul 4" style="width: 48%; height: auto; object-fit: cover;">
-                        </div>
-
-                         <br>
-
-                        <hr class="animated-line" />
-
-                    </li>
-                    <!-- Section: High Rollers -->
-                    <li>
-                        <img class="scaled-image-header" src="images/games/hrl_header.jpg"
-                            alt="THigh Rollers - Photo 1">
-                        <p style="font-size: larger;">
-                            <strong><a href="https://store.steampowered.com/app/2190460/Highrollers/"
-                                    target="_blank">High Rollers*</a></strong> is a 3D action boss-battler blending rogue-lite powerups, punchy combat, and handcrafted enemy encounters.
-
-                            <a href="https://store.steampowered.com/app/2190460/Highrollers/" target="_blank">wishlist
-                                High Rollers on Steam*</a>
-                        </p>
-
-                        <video class="scaled-video" controls autoplay loop muted playsinline>
-                            <source src="images/games/hrl_teaser_lowq.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-
-                        <p style="font-size: larger;"><strong>Role:</strong> Lead Gameplay Programmer <span style="color: #B3E1FF;">(Unity)</span>, Technical Artis <span style="color: #B3E1FF;">(HLSL /  Shader Graph)</span>, Project Manager</p>
-                        <ul class="details-list">
-                            <li><strong>Gameplay Systems : </strong> Designed and implemented combat systems, <span style="color: #E3B3FF;">AI NPC behavior</span> and player progression</li>
-                            <li><strong>Visual Effects : </strong> Special effects with Unity’s <span style="color: #E3B3FF;">VFX Graph and HLSL</span>; integrated 3D assets</li>
-                            <li><strong>Tooling Design : </strong> Developed custom <span style="color: #E3B3FF;">editor tools</span> to streamline design iteration and gameplay tuning</li>
-                            <li><strong>Optimization : </strong> Conducted <span style="color: #E3B3FF;">GPU/CPU profiling</span>; improved performance via batching, load balancing, and <span style="color: #E3B3FF;">Addressables</span></li>
-                        </ul>
-                        <br>
-                        <p>
-                            <strong>Achievements:</strong>
-                        <ul>
-                            <li> <a href="https://buglab.ist/en/bug-lab-tekmer-2" target="_blank">BAU BUG Lab's
-                                    Incubator Program in 2022*</li></a>
-                            <li> <a href="https://gamefactory.gs/tr/booster-turkce/" target="_blank">Google's Game
-                                    Booster Program in 2022*</li></a>
-                        </ul>
-                        </p>
-
-                        <p>Watch the trailer here:</p>
-                        <iframe src="https://drive.google.com/file/d/1ZGCk9jQAEAm2dlV9pEF1P0QBClVZEf7R/preview"
-                            class="scaled-video" width="1020" height="400" allow="autoplay"></iframe>
-                        <hr class="animated-line" />
-                    </li>
-                    <br>
-                    <!-- Section: Merge Barista -->
-                    <li>
-                        <h1>
-                            <a href="https://apps.apple.com/us/app/merge-barista-caf%C3%A9-decoration/id1579062276"
-                                target="_blank">Merge Barista*</a>
-                        </h1>
-                        <p style="font-size: large;">
-                            A mobile puzzle/merge game developed and launched with Zerosum and published by Zynga. The game features merge gameplay, live content updated, and a coffee shop meta.
-                        </p>
-                        <img class="scaled-video-quarter-size" style="width: 24.5%; margin-left:2em;"
-                            src="images/games/merge_1_ad.png" alt="Merge Barista - Photo 2">
-                        <img class="scaled-video-quarter-size" style="width: 26.2%; margin-left:3em;"
-                            src="images/games/merge_gif.gif" alt="Merge Barista - Photo 2">
-                        <img class="scaled-video-quarter-size" style="width: 24.5%; margin-left:3em;"
-                            src="images/games/merge_3_ad.png" alt="Merge Barista - Photo 2">
+                            <!-- Features -->
+                            <ul class="details-list">
+                                <li><strong>Node Based Dialogue Editor : </strong><span style="color: #E3B3FF;"> OOP
+                                        oriented</span> custom <span style="color: #E3B3FF;"> node-based dialogue
+                                        editorh</span> with runtime JSON parsing, and scalable logic architecture.
+                                    <a href="https://github.com/oykuyamakov" target="_blank">View it on GitHub</a>
+                                </li>
+                                <li><strong>Shader Work : </strong> Custom <span style="color: #E3B3FF;">HLSL/Shader
+                                        Graph</span> effects for outlines, distortion, parallax fog, glitch feedback
+                                </li>
+                                <li><strong>3D Art:</strong> Modeled assets in <span
+                                        style="color: #E3B3FF;">Blender</span>,
+                                    optimized for low-poly visuals and high
+                                    performance</li>
+                                <li><strong>C# Systems : </strong> OOP oriented game systems, custom game event
+                                    management, and 3d physics</li>
+                                <li><strong>Performance : </strong> Async loading, GPU-conscious design, low-overhead FX
+                                    and visuals</li>
+                            </ul>
+                            <br>
+                            <!-- Presentation Section -->
+                            <p><strong>Presented at:</strong>
+                                <span style="color: #E3B3FF;">NYU Game Center Spring Showcase 2025</span>,
+                                <span style="color: #B3E1FF;">NYC Games Festival 2025</span>,
+                                <span style="color: #FFCBA6;">GDC 2025</span>
+                            </p>
 
                             <br>
-                        <p style="font-size: larger;"><strong>Role:</strong> C# Programmer</p>
-                        <ul class="details-list">
-                            <li><strong>LiveOps Programming :</strong> <span style="color: #E3B3FF;">Addressables</span>, user profiles, <span style="color: #E3B3FF;">ads and monetization</span></li>
-                            <li><strong>System Design : </strong> OOP oriented system design, meta implementation, user progression tracking</li>
-                            <li><strong>Collaboration : </strong> Worked as a programmer with <span style="color: #E3B3FF;">team of 11 </span>, directly with level designers and UI artists, shipped monthly updates</li>
-                        </ul>
+
+                            <!-- 2x2 Image Grid -->
+                            <div style="display: flex; flex-wrap: wrap; gap: 1em;">
+                                <img src="images/games/istanbul/istnabulshowcase5.jpg" alt="Istanbul 1"
+                                    style="width: 48%; height: auto; object-fit: cover;">
+                                <img src="images/games/istanbul/istanbulgameshowcase1.jpg" alt="Istanbul 3"
+                                    style="width: 48%; height: auto; object-fit: cover;">
+                                <img src="images/games/istanbul/ist_showcasegif2.gif" alt="Istanbul 2"
+                                    style="width: 48%; height: auto; object-fit: cover;">
+                                <img src="images/games/istanbul/istanbulshowcase4.jpg" alt="Istanbul 4"
+                                    style="width: 48%; height: auto; object-fit: cover;">
+                            </div>
+
+                            <br>
+
+                            <hr class="animated-line" />
+
+                        </li>
+                    </section>
+                    <!-- Section: High Rollers -->
+                    <section id="highrollers">
                         <br>
+                        <li id="highrollers">
+                            <img class="scaled-image-header" src="images/games/hrl_header.jpg"
+                                alt="THigh Rollers - Photo 1">
+                            <p style="font-size: larger;">
+                                <strong><a href="https://store.steampowered.com/app/2190460/Highrollers/"
+                                        target="_blank">High Rollers*</a></strong> is a 3D action boss-battler blending
+                                rogue-lite powerups, punchy combat, and handcrafted enemy encounters.
 
-                        <p>
-                            Play Merge Barista on the <a
-                                href="https://apps.apple.com/us/app/merge-barista-caf%C3%A9-decoration/id1579062276"
-                                target="_blank">App Store</a>
-                        </p>
+                                <a href="https://store.steampowered.com/app/2190460/Highrollers/"
+                                    target="_blank">wishlist
+                                    High Rollers on Steam*</a>
+                            </p>
 
-                        <p>Check out this gameplay video of Merge Barista on youtube, shared by a player!</p>
-                        <iframe width="660" height="415" style="margin-left: 5em;"
-                            src="https://www.youtube.com/embed/KZKWCGjossU?start=191" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
+                            <video class="scaled-video" controls autoplay loop muted playsinline>
+                                <source src="images/games/hrl_teaser_lowq.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
 
-                        <hr class="animated-line" />
-                    </li>
+                            <p style="font-size: larger;"><strong>Role:</strong> Lead Gameplay Programmer <span
+                                    style="color: #B3E1FF;">(Unity)</span>, Technical Artis <span
+                                    style="color: #B3E1FF;">(HLSL / Shader Graph)</span>, Project Manager</p>
+                            <ul class="details-list">
+                                <li><strong>Gameplay Systems : </strong> Designed and implemented combat systems, <span
+                                        style="color: #E3B3FF;">AI NPC behavior</span> and player progression</li>
+                                <li><strong>Visual Effects : </strong> Special effects with Unity’s <span
+                                        style="color: #E3B3FF;">VFX Graph and HLSL</span>; integrated 3D assets</li>
+                                <li><strong>Tooling Design : </strong> Developed custom <span
+                                        style="color: #E3B3FF;">editor
+                                        tools</span> to streamline design iteration and
+                                    gameplay tuning</li>
+                                <li><strong>Optimization : </strong> Conducted <span style="color: #E3B3FF;">GPU/CPU
+                                        profiling</span>; improved performance via batching, load balancing, and <span
+                                        style="color: #E3B3FF;">Addressables</span></li>
+                            </ul>
+                            <br>
+                            <p>
+                                <strong>Achievements:</strong>
+                            <ul>
+                                <li> <a href="https://buglab.ist/en/bug-lab-tekmer-2" target="_blank">BAU BUG Lab's
+                                        Incubator Program in 2022*</li></a>
+                                <li> <a href="https://gamefactory.gs/tr/booster-turkce/" target="_blank">Google's Game
+                                        Booster Program in 2022*</li></a>
+                            </ul>
+                            </p>
+
+                            <p>Watch the trailer here:</p>
+                            <iframe src="https://drive.google.com/file/d/1ZGCk9jQAEAm2dlV9pEF1P0QBClVZEf7R/preview"
+                                class="scaled-video" width="1020" height="400" allow="autoplay"></iframe>
+                            <hr class="animated-line" />
+                        </li>
+                    </section>
+                    <!-- Section: Merge Barista -->
+                    <section id="merge">
+                        <br><br>
+                        <br><br>
+
+                        <li id="merge">
+                            <h1>
+                                <a href="https://apps.apple.com/us/app/merge-barista-caf%C3%A9-decoration/id1579062276"
+                                    target="_blank">Merge Barista*</a>
+                            </h1>
+                            <p style="font-size: large;">
+                                A mobile puzzle/merge game developed and launched with Zerosum and published by Zynga.
+                                The game features merge gameplay, live content updated, and a coffee shop meta.
+                            </p>
+                            <img class="scaled-video-quarter-size" style="width: 24.5%; margin-left:2em;"
+                                src="images/games/merge_1_ad.png" alt="Merge Barista - Photo 2">
+                            <img class="scaled-video-quarter-size" style="width: 26.2%; margin-left:3em;"
+                                src="images/games/merge_gif.gif" alt="Merge Barista - Photo 2">
+                            <img class="scaled-video-quarter-size" style="width: 24.5%; margin-left:3em;"
+                                src="images/games/merge_3_ad.png" alt="Merge Barista - Photo 2">
+
+                            <br>
+                            <p style="font-size: larger;"><strong>Role:</strong> C# Programmer</p>
+                            <ul class="details-list">
+                                <li><strong>LiveOps Programming :</strong> <span
+                                        style="color: #E3B3FF;">Addressables</span>, user profiles, <span
+                                        style="color: #E3B3FF;">ads and monetization</span></li>
+                                <li><strong>System Design : </strong> OOP oriented system design, meta implementation,
+                                    user progression tracking</li>
+                                <li><strong>Collaboration : </strong> Worked as a programmer with <span
+                                        style="color: #E3B3FF;">team of 11 </span>, directly with level designers and UI
+                                    artists, shipped monthly updates</li>
+                            </ul>
+                            <br>
+
+                            <p>
+                                Play Merge Barista on the <a
+                                    href="https://apps.apple.com/us/app/merge-barista-caf%C3%A9-decoration/id1579062276"
+                                    target="_blank">App Store</a>
+                            </p>
+
+                            <p>Check out this gameplay video of Merge Barista on youtube, shared by a player!</p>
+                            <iframe width="660" height="415" style="margin-left: 5em;"
+                                src="https://www.youtube.com/embed/KZKWCGjossU?start=191" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+
+                            <hr class="animated-line" />
+                        </li>
+                    </section>
 
                     <br>
 
                     <!-- Section: Belgrad Park -->
-                    <li>
-                        <h1><img class="scaled-image-header" src="images/games/belgradpark_header.jpg"
-                                alt="Belgrad Park - Photo 1"></h1>
-                        <p style="font-size: larger;">
-                            <strong><a href="https://guyginat.itch.io/belgrad-park" target="_blank">Belgrad Park*</a> a short-form 3D horror experience about urban legends and true crime storytelling. Built in Unity with a team of 3 and showcased at NYU Game Center’s Spring 2024 showcase </p>
-                        <img style="width: 100; margin-bottom:3em; margin-top: 3em;" src="images/games/belgradpark_gif.gif" alt="belgrad">
-                         <p style="font-size: larger;"><strong>Role:</strong> C# Programmer, Game Designer, Technical Artist (Shader Graph / HLSL) </p>
-                        <br>
-                        <ul class="details-list">
-                            <li><strong>Design:</strong> level and environment design, <span style="color: #E3B3FF;">3d modeling with blender</span></li>
-                            <li><strong>Programming:</strong> 3d gameplay implementation, <span style="color: #E3B3FF;"> custom 3d physics based interaction system</span></li>
-                        </ul>
+                    <section id="belgrad">
+                        <li id="belgrad">
+                            <h1><img class="scaled-image-header" src="images/games/belgradpark_header.jpg"
+                                    alt="Belgrad Park - Photo 1"></h1>
+                            <p style="font-size: larger;">
+                                <strong><a href="https://guyginat.itch.io/belgrad-park" target="_blank">Belgrad
+                                        Park*</a> a short-form 3D horror experience about urban legends and true crime
+                                    storytelling. Built in Unity with a team of 3 and showcased at NYU Game Center’s
+                                    Spring 2024 showcase
+                            </p>
+                            <img style="width: 100; margin-bottom:3em; margin-top: 3em;"
+                                src="images/games/belgradpark_gif.gif" alt="belgrad">
+                            <p style="font-size: larger;"><strong>Role:</strong> C# Programmer, Game Designer, Technical
+                                Artist (Shader Graph / HLSL) </p>
+                            <br>
+                            <ul class="details-list">
+                                <li><strong>Design:</strong> level and environment design, <span
+                                        style="color: #E3B3FF;">3d
+                                        modeling with blender</span></li>
+                                <li><strong>Programming:</strong> 3d gameplay implementation, <span
+                                        style="color: #E3B3FF;">
+                                        custom 3d physics based interaction system</span></li>
+                            </ul>
 
-                        <br>
-                        <br>
-                        <p>check out this gameplay video of Belgrad Park on youtube, shared by a player!</p>
-                        <iframe width="840" height="475" style="margin-bottom:3em; margin-top: 3em;" src="https://www.youtube.com/embed/_2fwRaqJtes" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
+                            <br>
+                            <br>
+                            <p>check out this gameplay video of Belgrad Park on youtube, shared by a player!</p>
+                            <iframe width="840" height="475" style="margin-bottom:3em; margin-top: 3em;"
+                                src="https://www.youtube.com/embed/_2fwRaqJtes" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
 
                             <hr class="animated-line" />
-                    </li>
+                        </li>
+                    </section>
 
                     <br>
 
                     <!-- Itch.io Games -->
-                    <li>
-                        <h1>Itch.io Projects</h1>
-                        <p>Find more experimental, weird, and playful works on my <a href="https://oykuyamako.itch.io/" target="_blank">Itch.io page*</a> — including tools, screensavers, and game jams.</p>
-                        <hr class="animated-line" />
-                    </li>
+                    <section id="other">
+                        <li id="other">
+                            <h1>Itch.io Projects</h1>
+                            <p>Find more experimental, weird, and playful works on my <a
+                                    href="https://oykuyamako.itch.io/" target="_blank">Itch.io page*</a> — including
+                                tools, screensavers, and game jams.</p>
+                            <hr class="animated-line" />
+                        </li>
 
-                    <br>
+                        <br>
 
-                   <!-- Cultural Games Talk -->
-                    <li>
-                        <h1>Cultural Games Talk</h1>
-                        <p>My talk at NYU Game Center on cultural authenticity, memory, and resistance in game design.</p>
-                        <iframe class="scaled-video" width="560" height="315" src="https://www.youtube.com/embed/EEg2iI9TGnw?start=8" allowfullscreen></iframe>
-                        <hr class="animated-line" />
-                    </li>
+                        <!-- Cultural Games Talk -->
+                        <li>
+                            <h1>Cultural Games Talk</h1>
+                            <p>My talk at NYU Game Center on cultural authenticity, memory, and resistance in game
+                                design.</p>
+                            <iframe class="scaled-video" width="560" height="315"
+                                src="https://www.youtube.com/embed/EEg2iI9TGnw?start=8" allowfullscreen></iframe>
+                            <hr class="animated-line" />
+                        </li>
+                    </section>
                     <br>
                     <!-- Contact -->
                     <p>
                         github <a href="https://github.com/oykuyamakov" target="_blank">@oykuyamakov</a>
-                        <br>itch.io <a href="https://oykuyamako.itch.io/" target="_blank">@yuko</a>
-                        <br>instagram: <a href="https://www.instagram.com/madayten/" target="_blank">@madayten</a>
+                        <br>
+                        instagram: <a href="https://www.instagram.com/madayten/" target="_blank">@madayten</a>
+                        <br>
+                        itch.io <a href="https://oykuyamako.itch.io/" target="_blank">@yuko</a>
                     </p>
                     <p><a href="mailto:oykuyamak@gmail.com?subject=Hi%20yuko&body=Sup">oykuyamak@gmail.com</a></p>
                 </ul>
+            </div>
         </main>
     </div>
     <script src="scripts/main.js"></script>
-    <script>    
-            document.addEventListener('DOMContentLoaded', function () {
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
             // Create the intersection observer
             const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                const hr = entry.target.querySelector('hr.animated-line');
-                if(hr){
-                    if (entry.isIntersecting) {
-                // Add the 'animate' class to the <hr> when section is in view
-                hr.classList.add('animate');
-                } else {
-                // Optionally, remove the 'animate' class if you want to reset the animation when not in view
-                hr.classList.remove('animate');
+                entries.forEach(entry => {
+                    const hr = entry.target.querySelector('hr.animated-line');
+                    if (hr) {
+                        if (entry.isIntersecting) {
+                            // Add the 'animate' class to the <hr> when section is in view
+                            hr.classList.add('animate');
+                        } else {
+                            // Optionally, remove the 'animate' class if you want to reset the animation when not in view
+                            hr.classList.remove('animate');
 
-                }
-                
-                }
-            });
+                        }
+
+                    }
+                });
             }, {
-            threshold: 0.5 // Trigger when 50% of the section is visible
+                threshold: 0.5 // Trigger when 50% of the section is visible
             });
-        
+
             // Observe each section that contains an <hr> with the 'animated-line' class
             const sections = document.querySelectorAll('li');
             sections.forEach(section => {
-            observer.observe(section);
+                observer.observe(section);
             });
         });
     </script>

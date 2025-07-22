@@ -1,4 +1,4 @@
-/* Reset + base */
+/* Reset + Base Styles */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -23,39 +23,38 @@ ul {
   list-style: none;
   padding: 0;
   margin: 0;
+}
 
-  .details-list{
-
+.details-list {
   margin-bottom: 2em;
-
-    margin-left: 5em;
-    list-style:disc;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-  }
+  margin-left: 5em;
+  list-style: disc;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
 }
 
 a {
   color: blueviolet;
-  text-decoration: underline;
-
+  text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
 }
 
+/* Layout */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2em 1em;
 }
 
-/* Header */
+/* Header Top */
 .up-bar {
   display: flex;
   flex-direction: column;
+  list-style: none;
   align-items: center;
   text-align: center;
   margin-bottom: 2em;
@@ -71,12 +70,12 @@ a:hover {
   font-weight: normal;
 }
 
-/* Navigation */
+/* Top Navigation */
 .left-bar {
   position: sticky;
   top: 0;
   background: black;
-  padding: 0.5em 0;
+  padding: 0.5em 0em;
   z-index: 100;
   text-align: center;
   border-top: 1px solid #444;
@@ -84,16 +83,28 @@ a:hover {
 }
 
 .left-bar nav ul {
+  padding:0.5% 0.5%;
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  gap: 2em;
+  gap: 3em;
 }
 
 .left-bar a {
   font-weight: bold;
 }
 
-/* Main Layout */
+.left-bar a.active-page {
+  font-size: 1.2em;
+  color: turquoise;
+  text-decoration: none;
+  transform: scale(1.05);
+}
+
+.left-bar a.active-page:hover {
+  color: turquoise;
+}
+/* Main Content */
 main {
   display: flex;
   flex-direction: column;
@@ -105,9 +116,27 @@ main {
   width: 100%;
 }
 
+/* About Section */
+.aboutpage-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 3em;
+  margin-top: 3em;
+}
 
-.aboutpage-body > li {
+.aboutpage-body > li:first-child {
   max-width: 600px;
+}
+
+.aboutpage-body > li:last-child {
+  flex: 1 1 250px;
+}
+
+.aboutpage-body li p {
+  margin-bottom: 1.5em;
 }
 
 .scaled-image-border-large {
@@ -115,7 +144,7 @@ main {
   margin-bottom: 2em;
 }
 
-/* Project List */
+/* Project/Game List Items */
 .project-list {
   display: flex;
   flex-direction: column;
@@ -126,7 +155,6 @@ main {
 .project-list li {
   max-width: 900px;
   width: 100%;
-  
 }
 
 .project-list h1 {
@@ -153,6 +181,7 @@ main {
   display: inline-block;
 }
 
+/* Horizontal Rule Animation */
 hr.animated-line {
   border: none;
   height: 5px;
@@ -181,65 +210,7 @@ hr.animated-line::after {
   right: 0;
 }
 
-/* Scrollbar */
-::-webkit-scrollbar {
-  width: 12px;
-}
-
-::-webkit-scrollbar-track {
-  background: black;
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgb(69, 11, 123);
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: turquoise;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .left-bar nav ul {
-    flex-direction: column;
-    gap: 1em;
-  }
-
-  .aboutpage-body {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .scaled-video-quarter-size {
-    width: 80%;
-  }
-}
-
-.aboutpage-body {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 3em;
-  margin-top: 3em;
-  
-}
-
-.aboutpage-body > li:first-child {
-  max-width: 600px;
-  
-}
-
-.aboutpage-body > li:last-child {
-  flex: 1 1 250px;
-}
-
-.aboutpage-body li p {
-  margin-bottom: 1.5em;
-}
-
+/* Particle Effect */
 .scrollbar-particles {
   position: fixed;
   pointer-events: none;
@@ -285,4 +256,162 @@ hr.animated-line::after {
   100% {
     background-color: turquoise;
   }
+}
+
+/* Header Section Grid (Games/Projects) */
+.header-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px , 0fr));
+  gap: 1.5em;
+  margin-bottom: 3em;
+  justify-content: center;
+}
+
+.header-box {
+  background: #111;
+  border: 2px solid purple;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.05);
+}
+
+.header-box img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+}
+
+.header-box .header-content {
+  padding: 1em;
+  color: white;
+  text-align: center;
+}
+
+.header-box:hover {
+  transform: scale(1.03);
+  border-color: blueviolet;
+  box-shadow: 0 0 15px blueviolet;
+}
+
+/* Section Navigation (Sticky Scrollbar Nav) */
+.section-nav {
+  position: sticky;
+  top: 4%;
+  background-color: #000000e7;
+  border-top: 1px solid blueviolet;
+  border-bottom: 1px solid rgb(42, 18, 65);
+  padding: 0em 0;
+  padding-top: 0.7em;
+  text-align: center;
+}
+
+.section-nav ul {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  padding:0.5% 0.5%;
+}
+
+.section-nav li {
+  background-color: #000000;
+  color: #ccc;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  /* padding: 0.4em 1em; */
+}
+
+.section-nav li:hover {
+  background: #222;
+  color: white;
+}
+
+.section-nav li.active {
+  font-size: 1.05em;
+  color: rgb(255, 255, 255);
+  transform: scale(1.05);
+}
+
+.section-nav li.deactive {
+  font-size: 0.85em;
+  color: rgba(164, 164, 164, 0.801);
+  transform: scale(.95);
+}
+
+/* Responsive Behavior */
+@media (max-width: 768px) {
+  .scaled-video-quarter-size {
+    width: 80%;
+  }
+
+  .header-box {
+    width: 100%;
+  }
+}
+
+
+.header-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  justify-content: center;
+  margin-top: 0.6em;
+}
+
+.header-tags .tag {
+  padding: 0.3em 0.8em;
+  font-size: 0.8em;
+  border-radius: 20px;
+  font-weight: bold;
+  background: #222;
+  color: white;
+  border: 1px solid #555;
+  transition: all 0.3s ease;
+}
+
+/* Themed tag colors */
+.tag.unity {
+  background: #0d1a33;
+  border-color: #2365d1;
+  color: #7ab8ff;
+}
+
+.tag.touchdesigner {
+  background: #021d2c;
+  border-color: #00d9ff;
+  color: #88f2ff;
+}
+
+.tag.vfx {
+  background: #300927;
+  border-color: #ff69b4;
+  color: #ffb8d2;
+}
+
+.tag.vj {
+  background: #180030;
+  border-color: #ba55d3;
+  color: #dfb4ff;
+}
+
+.tag.tool {
+  background: #2b2b2b;
+  border-color: #888;
+  color: #ccc;
+}
+
+.tag.ui {
+  background: #222;
+  border-color: #999;
+  color: #fff;
+}
+
+.tag.interactiveart {
+  background: #102010;
+  border-color: #50c878;
+  color: #afffb0;
 }
